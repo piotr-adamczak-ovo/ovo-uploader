@@ -5,8 +5,22 @@ var utils = require('utils');
 
 module.exports = function(app) {
 	/* POST photo */
+
+
 	app.post('/api/upload', upload_photo);
 };
+
+/**
+ * @api {post} /api/upload Upload photo
+ * @apiName upload
+ * @apiGroup OVO-Photo-Meter-API
+ *
+ * @apiParam {Image} image 
+ *
+ * @apiSuccess {String} result Result of operation
+ * @apiError (400) {String} error Bad request
+ * @apiError (500) {String} error Server error
+ */
 
 var upload_photo = function (req, res) {
 
