@@ -1,0 +1,14 @@
+{
+  "name": "ovo-uploader",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "postinstall": "bower install"
+  },
+  "dependencies": {
+    "bower": "^1.4.1",
+    "express": "~3.4.6",
+    "multer": "^0.1.8"
+  }
+}
