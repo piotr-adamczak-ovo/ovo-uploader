@@ -14,6 +14,7 @@ module.exports = function(app) {
  * @api {post} /api/upload Upload photo
  * @apiName upload
  * @apiGroup OVO-Photo-Meter-API
+ * @apiDescription All photos are backup <a href="https://www.dropbox.com/sh/245j82c9pva4eqi/AACPW-Be8NHGjWIfVkerfIixa?dl=0" target="_blank">here</a>
  *
  * @apiParam {Image} image 
  *
