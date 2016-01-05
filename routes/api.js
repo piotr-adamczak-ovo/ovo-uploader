@@ -2,6 +2,7 @@ var express = require('express');
 var dropbox = require("dropbox_rest");
 var fs = require('fs');
 var utils = require('utils');
+var uuid = require('node-uuid');
 
 module.exports = function(app) {
 	/* POST photo */
@@ -34,7 +35,7 @@ var upload_photo = function (req, res) {
     console.log('Start uploading: %j', req.files.image.path);
     var image = req.files.image.path;
  
-    var filename = 'meter_photo_'+utils.datetimestamp()+'-upload.jpg';
+    var filename = 'meter_photo_'+uuid.v4()'-'+utils.datetimestamp()+'-upload.jpg';
     // utils.copyFileSync(image, __dirname + '/../uploads/'+filename);
     
     dropbox.uploadFileToDropbox(image,filename,function(error, stats) {
